@@ -28,7 +28,10 @@ tmux_actions = {
 
 chdir("/home/max/")
 
-def on_press(keystroke):
+
+# This function is called when the user presses a key on the secondary keyboard.
+# Keystroke is the list of keys pressed in the form "Mod-Mod-Mod-Key", Mod being a letter for a modifier (e.g. "C" for Control)
+def on_press(keystroke, device):
     if get_window_title().endswith(": tmux: client — Konsole"):
         try:
             system("tmux " + tmux_actions[keystroke])

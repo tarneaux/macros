@@ -1,3 +1,4 @@
+#! /usr/bin/python3
 # This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public Licence version 2 as published by the Free Software Foundation.
 
 from lib import *
@@ -34,7 +35,7 @@ class Main:
             if action.type == 1 or action.type == 2:
                 if action.key not in mod_keys.keys():
                     keystroke = get_keystroke(action.device, action.key)
-                    Thread(target=on_press, args=(keystroke,)).start()
+                    Thread(target=on_press, args=(keystroke, action.device,)).start()
 
 
 def get_current_mods(device: int):

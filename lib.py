@@ -5,7 +5,7 @@ from select import select
 from evdev import ecodes
 from atexit import register
 
-
+# List of devices to grab and listen to
 device_names = ["Dell Dell USB Entry Keyboard"]
 
 
