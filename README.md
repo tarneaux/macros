@@ -21,7 +21,3 @@ Now that you have the device names, set the actions you want in `actions.py`. It
 - The key itself as outputted by the evdev lib (e.g. `a` for a and `up` for up arrow)
 
 You can find the key names in the [linux kernel source](https://github.com/torvalds/linux/blob/master/include/uapi/linux/input-event-codes.h) or by running `evtest` in a terminal. The KEY_ start of the name is removed and the remaining string is converted to lowercase to prevent errors with the modifier key abbreviations.
-
-
-
-This project is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 2 as published by the Free Software Foundation.
